@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.storydashboard.mapper.MemberMapper">
+    <insert id="saveMember" parameterType="MemberVo">
+        INSERT INTO t_member
+            (firstname, secondname, email, indate, withdraw, password)
+        VALUES(#{firstname},#{secondname},#{email},#{indate},#{password});
+    </insert>
+</mapper>
