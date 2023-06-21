@@ -6,7 +6,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.validation.Valid;
+import java.util.Map;
 
 @Controller
 @RequiredArgsConstructor
@@ -31,7 +36,7 @@ public class DashBoardController {
     }
 
     @PostMapping("/singUp")
-    public String signUp(MemberVO memberVO) {
+    public String signUp(@Valid MemberVO memberVO) {
         memberService.joinUser(memberVO);
         return "redirect:/login";
     }

@@ -5,7 +5,7 @@
 <mapper namespace="com.example.storydashboard.mapper.MemberMapper">
     <insert id="saveMember" parameterType="MemberVo">
         INSERT INTO t_member
-            (firstname, secondname, email, indate, withdraw, password)
-        VALUES(#{firstname},#{secondname},#{email},#{indate},#{password});
+            (firstname, secondname, email, withdraw, password)
+        VALUES(#{firstname},#{secondname},#{email},0,#{password});
     </insert>
 </mapper>

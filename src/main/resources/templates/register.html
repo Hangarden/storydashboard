@@ -36,44 +36,45 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user" action="signUp" method="post">
+                            <form name="join_form" class="user" action="/singUp" method="post">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="firstname"
+                                        <input type="text" class="form-control form-control-user" id="firstname" name="firstname"
                                                placeholder="First Name">
 <!--                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"-->
 <!--                                            placeholder="First Name">-->
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="lastname"
+                                        <input type="text" class="form-control form-control-user" id="secondname" name="secondname"
                                                placeholder="Last Name">
 <!--                                        <input type="text" class="form-control form-control-user" id="exampleLastName"-->
 <!--                                            placeholder="Last Name">-->
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="email"
+                                    <input type="email" class="form-control form-control-user" id="email" name="email"
                                            placeholder="Email Address">
 <!--                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"-->
 <!--                                        placeholder="Email Address">-->
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
+                                        <input type="password" class="form-control form-control-user" name="password"
                                                id="password" placeholder="Password">
 <!--                                        <input type="password" class="form-control form-control-user"-->
 <!--                                            id="exampleInputPassword" placeholder="Password">-->
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user"
-                                               id="repeatpassword" placeholder="Repeat Password">
+                                               id="repeatPassword" placeholder="Repeat Password">
 <!--                                        <input type="password" class="form-control form-control-user"-->
 <!--                                            id="exampleRepeatPassword" placeholder="Repeat Password">-->
                                     </div>
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                    Register Account
-                                </a>
+                                <button type="button" class="btn btn-primary btn-user btn-block" onclick="joinForm_check()">Register Account</button>
+<!--                                <a href="/login" id="register-button" class="btn btn-primary btn-user btn-block">-->
+<!--                                    Register Account-->
+<!--                                </a>-->
                                 <hr>
                                 <a href="index.html" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Register with Google
@@ -100,12 +101,19 @@
     <!-- Bootstrap core JavaScript-->
     <script src="/bootstrap/vendor/jquery/jquery.min.js"></script>
     <script src="/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="/bootstrap/js/valid/valid.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="/bootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="/bootstrap/js/sb-admin-2.min.js"></script>
+<!--    <script>-->
+<!--        document.getElementById("register-button").addEventListener("click", function(event) {-->
+<!--            event.preventDefault(); // 기본 이벤트를 막아서 페이지 이동을 방지합니다.-->
+
+<!--            joinform_check(); // 여기에서 joinform_check 함수를 호출합니다.-->
+<!--        });-->
+<!--    </script>-->
 
 </body>
 
